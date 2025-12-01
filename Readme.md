@@ -23,7 +23,7 @@
 
 Basic cpp standard template library.
 
-* [![Next][Next.js]][https://img.shields.io/badge/-C++-blue?logo=cplusplus]
+* ![CPP](https://img.shields.io/badge/-C++-blue?logo=cplusplus)
 * 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
