@@ -32,21 +32,19 @@ Basic cpp and standard template library.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Qt
   ```sh
-  npm install npm@latest -g
+  sudo apt install qt-6.10
   ```
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/RaffayIrfan/tower-blaster-cpp
    ```
-3. Install gcc with mingw
+2. Install gcc with mingw
     https://code.visualstudio.com/docs/cpp/config-mingw
 
 

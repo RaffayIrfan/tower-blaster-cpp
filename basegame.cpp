@@ -4,6 +4,7 @@
 #include<vector>
 #include<array>
 #include<algorithm>
+#include"nlohmann/json.hpp"
 
 using namespace std;
 
@@ -225,6 +226,9 @@ void game(){
     cout << "Welcome to the Base Game!\n";
     cout << "This is TowerBlaster Base game\n";
     cout << "Arrange the numbers in ascending order!\n";
+    cout<< "With Ai or not? 1 for Ai 0 for 1v1\n";
+    bool vs_ai;
+    cin >> vs_ai;
     
     deck deck;
     array<int, 10> tower1;
@@ -248,9 +252,13 @@ void game(){
         }
 
         print_towers(tower1, tower2);
-
-        //human_move(tower2, drawn_card, deck, 2);
-        ai_move(tower2, drawn_card, deck);
+        if(vs_ai == false){
+            human_move(tower2, drawn_card, deck, 2);
+        }
+        else{
+            ai_move(tower2, drawn_card, deck);
+        }
+        
         if(checkwin(tower2)){
             cout << "Player 2 wins!\n";
             print_towers(tower1, tower2);
