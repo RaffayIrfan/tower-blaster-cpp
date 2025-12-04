@@ -4,7 +4,6 @@
 #include<vector>
 #include<array>
 #include<algorithm>
-#include"nlohmann/json.hpp"
 
 using namespace std;
 
@@ -269,7 +268,8 @@ void game(){
 }
 
 int main(){
-
+    int n;
     game();
+    cin>>n;
     return 0;
 }
