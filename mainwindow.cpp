@@ -16,9 +16,13 @@
 
 using namespace std;
 
-bool checkwin(array<int, 10> tower) {
+bool checkwin(array<QPushButton *, 10> tower) {
+    array<int,10> button_value;
     for (int i = 0; i < 9; i++) {
-        if (tower[i] > tower[i + 1]) {
+        button_value[i] = tower[i]->text().toInt();
+    }
+    for (int i = 0; i < 9; i++) {
+        if (button_value[i] > button_value[i + 1]) {
             return false;
         }
     }
@@ -97,6 +101,12 @@ void MainWindow::On_tower_clicked() {
     button->setText(QString::number(temp));
 
     drawn_card_label->setText(("Drawn Card: " + to_string(drawn_card)).c_str());
+
+    if (checkwin(buttons1)) {
+        drawn_card_label->setText("Player 1 Wins!");
+    } else if (checkwin(buttons2)) {
+        drawn_card_label->setText("Player 2 Wins!");
+    }
 }
 
 void MainWindow::On_draw_clicked() {
