@@ -77,6 +77,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    QWidget *mainmenu = new QWidget(this);
+    QWidget *player1v1loc = new QWidget(this);
+
     deck deck; 
     int drawn_card; 
     QLabel* drawn_card_label= new QLabel(this); 
@@ -84,9 +88,13 @@ public:
     std::array<QPushButton*, 10> buttons1;
     std::array<QPushButton*, 10> buttons2;
 
+    void player1v1();
+    void main_menu();
+
 public slots:
     void On_tower_clicked();
     void On_draw_clicked();
+    void p1v1_click();
     //void On_discard_clicked();
 };
 

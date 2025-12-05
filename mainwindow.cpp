@@ -5,7 +5,7 @@
 #include<QVBoxLayout>
 #include<QHBoxLayout>
 #include<QString>
-
+#include<QMessageBox>
 
 #include<iostream>
 #include<limits>
@@ -33,10 +33,37 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     setWindowTitle("Tower Blaster GUI Client");
-
-    QWidget *centralWidget = new QWidget(this);
     
-    QVBoxLayout *master_layout = new QVBoxLayout(this);
+    main_menu();
+    player1v1();
+
+    setCentralWidget(mainmenu);
+}
+
+MainWindow::~MainWindow() {}
+
+void MainWindow::main_menu(){
+    QVBoxLayout *main_menu = new QVBoxLayout(mainmenu);
+
+    QLabel *title = new QLabel(this);
+    title->setText("Tower Blaster");
+    title->setAlignment(Qt::AlignHCenter);
+    title->setStyleSheet("font-weight: bold; font-size: 24px;");
+    main_menu->addWidget(title);
+
+    QPushButton *p1v1 = new QPushButton(this);
+    p1v1->setText("1v1 Player Mode");
+    main_menu->addWidget(p1v1);
+
+    //QMessageBox::about(this, "About Qt Menu Example",
+                           //"This is a simple application demonstrating how to create "
+                           //"menus, actions, and connect them to slots in Qt Widgets (C++).");
+
+    connect(p1v1,SIGNAL(clicked()), this, SLOT(p1v1_click()));
+}
+
+void MainWindow::player1v1(){
+    QVBoxLayout *master_layout = new QVBoxLayout(player1v1loc);
     QHBoxLayout *towers = new QHBoxLayout(this);
 
     QLabel *toptext = new QLabel(this);
@@ -84,13 +111,11 @@ MainWindow::MainWindow(QWidget *parent)
     master_layout->addWidget(drawn_card_label);
     master_layout->addWidget(newcard);
 
-    centralWidget->setLayout(master_layout);
+    player1v1loc->setLayout(master_layout);
 
-    setCentralWidget(centralWidget);
 }
 
-MainWindow::~MainWindow() {}
-
+//Here are the slot implementations
 void MainWindow::On_tower_clicked() {
     QPushButton *button = qobject_cast<QPushButton*>(sender());
 
@@ -113,4 +138,8 @@ void MainWindow::On_draw_clicked() {
     deck.discard_card(drawn_card);
     drawn_card = deck.draw_rand_card();
     drawn_card_label->setText(("Drawn Card: " + to_string(drawn_card)).c_str());
+}
+
+void MainWindow::p1v1_click() {
+    setCentralWidget(player1v1loc);
 }
