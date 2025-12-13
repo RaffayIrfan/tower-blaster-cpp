@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![product-screenshot](https://example.com)
+![product-screenshot](screenhot.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
