@@ -91,8 +91,9 @@ Project Link: [https://github.com/RaffayIrfan/tower-blaster-cpp](https://github.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
