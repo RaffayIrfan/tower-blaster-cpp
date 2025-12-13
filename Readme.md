@@ -57,7 +57,11 @@ This is an example of how to list things you need to use the software and how to
 ## Usage
 
 > [!NOTE]
-> 
+> You can play either with ai or 1v1 in gui or tui modes.
+
+[Release](https://github.com/RaffayIrfan/tower-blaster-cpp/releases)
+
+Extract the build zip and run tuigame.exe or guigame.exe.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
