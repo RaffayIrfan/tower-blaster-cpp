@@ -24,7 +24,7 @@ Basic cpp and standard template library.
 And qt6.10 Framework.
 
 * ![CPP](https://img.shields.io/badge/-C++-blue?logo=cplusplus)
-* ![qt](https://img.shields.io/badge/language-C%2B%2B%20%2F%20QT-orange)
+* ![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
