@@ -19,11 +19,11 @@
 
 using namespace std;
 
-class deck{
+class decki{
     private:
         vector<int> cards;
     public:
-        deck(){
+        decki(){
             for(int i=1; i<=50; i++){
                 cards.push_back(i);
             }
@@ -75,15 +75,26 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-   
-    deck deck; 
+    decki deck; 
+    decki deckai; 
     int drawn_card;
+    int ai_drawncard;
     bool flipflop = true;
 
+    // Player widgets
     std::array<QPushButton*, 10> buttons1;
     std::array<QPushButton*, 10> buttons2;
 
+    // AI widgets (for the With_ai screen)
+    std::array<QPushButton*, 10> ai_buttons1;
+    std::array<QPushButton*, 10> ai_buttons2;
+
     QStackedWidget *stackedWidget = new QStackedWidget(this);
+
+    QPushButton *ai_newcard = new QPushButton(this);
+    QPushButton *ai_discardcard = new QPushButton(this);
+    QPushButton *ai_restart = new QPushButton(this);
+    QPushButton *ai_menubutton = new QPushButton(this);
 
     QLabel* drawn_card_label= new QLabel(this); 
     QLabel* player_move= new QLabel(this); 
@@ -91,6 +102,14 @@ public:
     QPushButton *discardcard = new QPushButton(this);
     QPushButton *restart = new QPushButton(this);
     QPushButton *menubutton = new QPushButton(this);
+    QPushButton *mode = new QPushButton(this);
+
+    // AI display widgets
+    QLabel* ai_drawn_card_label = new QLabel(this);
+    QLabel* ai_move = new QLabel(this);
+
+    bool mode_selected = false;
+
 
     QWidget *mainmenu = new QWidget(this);
     QVBoxLayout *main_menulay = new QVBoxLayout(mainmenu);
@@ -108,11 +127,22 @@ public:
 public slots:
     void On_tower_clicked();
     void On_draw_clicked();
+    void On_draw_clicked_ai();
     void p1v1_click();
     void ai();
+    void On_discard_clicked_ai();
     void On_discard_clicked();
     void On_restart_clicked();
+    void On_restart_clicked_ai();
+    void ai_take_turn();
     void On_mainmenu_clicked();
+    void hard_mode_switch();
+
+private:
+    int calculate_inversions(std::array<QPushButton*, 10> tower);
+
 };
 
 #endif // MAINWINDOW_H
+
+
