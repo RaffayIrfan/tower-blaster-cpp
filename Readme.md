@@ -21,8 +21,11 @@
 ### Built With
 
 Basic cpp and standard template library.
+And qt6.10 Framework.
 
 * ![CPP](https://img.shields.io/badge/-C++-blue?logo=cplusplus)
+* ![qt](https://img.shields.io/badge/language-C%2B%2B%20%2F%20QT-orange)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -53,9 +56,8 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+> [!NOTE]
+> 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
