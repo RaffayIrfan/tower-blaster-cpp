@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="/screenshot.png" alt="Alt text" width="300" height="200">
+<img src="/Screenshot.png" alt="Alt text" width="300" height="200">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
